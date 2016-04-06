@@ -25,12 +25,12 @@ Windows
 ###General
 betweenQueriesInterval: Number of seconds between queries  
 betweenQueriesSalt: Random number of seconds added between queries  
-betweenAccountsInterval Number of seconds between accounts  
-betweenAccountsSalt Random number of seconds added between accounds  
-addSearchesDesktop Number of extra desktop searches  
-addSearchesDesktopSalt Random number of added desktop searches  
-addSearchesMobile Number of extra mobile searches  
-addSearchesMobileSalt Random number of added mobile searches  
+betweenAccountsInterval: Number of seconds between accounts  
+betweenAccountsSalt: Random number of seconds added between accounds  
+addSearchesDesktop: Number of extra desktop searches  
+addSearchesDesktopSalt: Random number of added desktop searches  
+addSearchesMobile: Number of extra mobile searches  
+addSearchesMobileSalt: Random number of added mobile searches  
 
 ###Accounts
 You can have as many account tags as you need.  
@@ -49,6 +49,9 @@ You can have as many account tags as you need.
 - bing
 - googleTrends
 - wikipedia
+```xml
+<queries generator="wikipedia" />
+```
 
 ###Events
 onError: Defines what the script should do when an error occurs durring processing an account.  
@@ -69,7 +72,7 @@ LOCAL_CONFIG_DIR=/home/bingrewards/etc
 
 0   1   *   *   *   sleep $(($RANDOM \% 120))m && python2 /home/bingrewards/bin/main.py 2>&1 | gzip > /home/bingrewards/var/log/bingrewards/`date "+\%Y-\%m-\%dT\%H:\%M:\%S"`.log.gz
 ```
-Windows: Use build in Task Scheduler
+Windows: Use built in Task Scheduler
 
 ##References
 - For more information, including how to use this, please, take a look at my blog post:
